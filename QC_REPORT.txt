@@ -4,9 +4,12 @@ DEPO: KaanAdacan/Doktora_Tezi
 PUBLIC REPOSITORY SCOPE — 23.09.2026
 
 BÖLÜM 2
-Final canonical matched-10ps MAPK/ADK analiz zinciri, Stage 00 QC dahil olmak üzere senkronizedir.
-Stage 03/04 RMSD, RMSF, Rg ve PCA çekirdek kodları Source v2 ile byte-identical olarak doğrulanmıştır.
-MAPK NAMD .conf dosyaları doğrulanmış MAPK_NVT_NPT_GPU kaynak paketiyle eşitlenmiştir.
+Final canonical matched-10ps Stage 03/04 RMSD, RMSF, Rg ve PCA çekirdek kodları en güncel Source v2 ile byte-identical olarak doğrulanmıştır.
+Final tez metni üreticisi doğrulanmış full-source snapshot ile eşitlenmiştir.
+MAPK NAMD .conf dosyaları doğrulanmış MAPK_NVT_NPT_GPU kaynak paketiyle byte-for-byte eşitlenmiştir.
+Full-source ve core-source arşivlerinin SHA-256 değerleri SOURCE_ARCHIVE_SHA256.txt içinde kayıtlıdır.
+
+Stage 00 appendix QC kodu, kendi varsayılan verified-reference manifesti aynı source arşivinde bulunmadığı için canonical runtime zincirine otomatik olarak eklenmemiştir. Mevcut State Discovery / topology-provenance aşamaları da yalnız dosya tarihine bakılarak overwrite edilmemiştir.
 
 BÖLÜM 3
 Kaynak kod yayın öncesi kapalıdır; benchmark/validation materyalleri public release kapsamında tutulmaktadır.
