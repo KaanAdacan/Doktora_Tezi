@@ -1,0 +1,4 @@
+reference_id	title	authors	journal	year	doi	pmid	verified_status	used_for
+MDANALYSIS2011	MDAnalysis: a toolkit for the analysis of molecular dynamics simulations	Michaud-Agrawal N; Denning EJ; Woolf TB; Beckstein O	J Comput Chem	2011	10.1002/jcc.21787	21500218	VERIFIED	Trajectory/topology analysis framework
+PCA2014	Principal component analysis: a method for determining the essential dynamics of proteins	David CC; Jacobs DJ	Methods Mol Biol	2014	10.1007/978-1-62703-658-0_11	24061923	VERIFIED	Principal-component/essential-dynamics methodology
+CLUSTER2007	Clustering Molecular Dynamics Trajectories: 1. Characterizing the Performance of Different Clustering Algorithms	Shao J; Tanner SW; Thompson N; Cheatham TE 3rd	J Chem Theory Comput	2007	10.1021/ct700119m	26636222	VERIFIED	Molecular-dynamics trajectory clustering methodology
