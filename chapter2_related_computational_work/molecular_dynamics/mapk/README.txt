@@ -1,10 +1,10 @@
 MAPK moleküler dinamik kodları
 
-analysis/ dizini RMSD, RMSF, radius of gyration (Rg), kalıntı dinamikleri ve snapshot analizlerini ayrı programlar halinde içermektedir.
+namd_config/ dizini NVT, NPT ve 0–100 ns üretim simülasyonu için altı aşamalı NAMD yapılandırma setini içerir. Bu yapılandırmalar doğrulanmış `MAPK_NVT_NPT_GPU(2).zip` kaynak paketiyle birebir senkronize edilmiştir; paket SHA-256 değeri kökteki `SOURCE_ARCHIVE_SHA256.txt` dosyasında kayıtlıdır.
 
-namd_config/ dizini NVT, NPT ve 0–100 ns üretim simülasyonu için altı aşamalı NAMD yapılandırma setini içermektedir.
+runtime_scripts/ dizini yerel WSL/GPU zincir çalıştırıcısı, doğrulama, durum izleme, canlı izleme ve durdurma yardımcılarını içerir. Kaynak paketin orijinal kullanım notu `README_WSL_GPU.txt`, dosya SHA-256 envanteri `SHA256SUMS_LOCAL.txt` olarak aynı dizinde tutulur.
 
-runtime_scripts/ dizini yerel WSL/GPU zincir çalıştırıcısı, doğrulama, durum izleme, canlı izleme ve durdurma yardımcılarını içermektedir.
+analysis/ dizinindeki standalone RMSD/RMSF/Rg/kalıntı dinamikleri/snapshot kodları provenance amacıyla korunur. Tezde raporlanan final matched-10ps MAPK/ADK metrikleri için canonical analiz zinciri `../../namd_cordycepin_matched10ps_v2.2/` dizinidir.
 
 Beklenen harici girdiler:
 inputs/mapk_ion.psf
