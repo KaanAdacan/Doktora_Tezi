@@ -1,0 +1,10 @@
+QC DURUMU: PASS
+DEPO: KaanAdacan/Doktora_Tezi
+
+PUBLIC REPOSITORY SCOPE — 23.09.2026
+
+BÖLÜM 2
+Temel NAMD MAPK/ADK kodları dahil; ayrıntılı etkileşim analizi onay sonrası.
+
+BÖLÜM 3
+Kaynak kod yayın öncesi kapalı; benchmark/validation materyalleri public release kapsamında tutulmaktadır.

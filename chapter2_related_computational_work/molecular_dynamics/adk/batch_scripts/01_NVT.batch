@@ -1,0 +1,53 @@
+#!/bin/bash
+#SBATCH --job-name=ADK_01_NVT
+#SBATCH --account=kadacan
+#SBATCH --partition=akya-cuda
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gres=gpu:1
+#SBATCH --time=3-00:00:00
+#SBATCH --output=%x_%j.slurm.out
+#SBATCH --error=%x_%j.slurm.err
+
+set -uo pipefail
+cd "$SLURM_SUBMIT_DIR" || exit 10
+mkdir -p "runs/01_NVT"
+
+for f in inputs/ADK_ion.psf inputs/ADK_ion.pdb \
+         inputs/par_water_ions_ale.prm inputs/par_all36_prot.prm inputs/par_all36_cgenff.prm \
+         01_NVT.conf; do
+    [[ -s "$f" ]] || { echo "FATAL: missing input $f" >&2; exit 11; }
+done
+
+module purge
+module load apps/namd/3.0.1-multicore-CUDA || exit 12
+
+export OMP_NUM_THREADS=1
+
+echo "DATE_START=$(date -Is)"
+echo "HOST=$(hostname)"
+echo "JOB_ID=$SLURM_JOB_ID"
+echo "JOB_NAME=$SLURM_JOB_NAME"
+echo "PARTITION=$SLURM_JOB_PARTITION"
+echo "CPUS_PER_TASK=$SLURM_CPUS_PER_TASK"
+echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+which namd3 || exit 13
+nvidia-smi -L || exit 14
+
+LOG="runs/01_NVT/namd_${SLURM_JOB_ID}.log"
+CMD=(namd3 +p${SLURM_CPUS_PER_TASK} +setcpuaffinity +devices 0 "01_NVT.conf")
+printf 'COMMAND='; printf '%q ' "${CMD[@]}"; echo
+"${CMD[@]}" > "$LOG" 2>&1
+RET=$?
+
+echo "NAMD_EXIT_CODE=$RET"
+echo "DATE_END=$(date -Is)"
+[[ $RET -eq 0 ]] || exit $RET
+
+for f in "runs/01_NVT/ADK_NVT.coor" "runs/01_NVT/ADK_NVT.vel" "runs/01_NVT/ADK_NVT.xsc"; do
+    [[ -s "$f" ]] || { echo "FATAL: expected final state missing: $f" >&2; exit 90; }
+done
+
+echo "FINAL_STATE_OK=YES"
+exit 0

@@ -1,0 +1,43 @@
+CHAPTER 3 BENCHMARK — 10 PASS PUBLIC RELEASE QC
+
+PASS 1: Arşiv ve sıkıştırma bütünlüğü
+STATUS: PASS
+4/4 ZIP CRC PASS
+
+PASS 2: Dosya sayısı ve zorunlu yapı
+STATUS: PASS
+GEO matrix=11; Vesseller image=38; mask=38; Cohort validation=25; zero-byte=0
+
+PASS 3: GEO10 raw ↔ rapor SHA-256
+STATUS: PASS
+11/11 exact; mismatch=0; extra=0
+
+PASS 4: Authoritative manifest eşleşmesi
+STATUS: PASS
+127/127 dosya byte-identical; mismatch=0
+
+PASS 5: CohortMaster doğrulama durumları
+STATUS: PASS
+acceptance=8/8 PASS; independent-R summary=8/8 PASS; IGF1R master=7/7 PASS
+
+PASS 6: Vesseller benchmark cardinality ve audit
+STATUS: PASS
+38/38 image; per-image=38; four-way=38/38; export=161 PASS/0 FAIL/0 MISSING
+
+PASS 7: Kaynak kod ve secret sızıntısı
+STATUS: PASS
+code=0; secret-name=0; secret-content=0
+
+PASS 8: İstenmeyen dış işaret taraması
+STATUS: PASS
+istenmeyen metin işareti=0; public Vesseller işareti=0; veri tablolarındaki biyolojik gen sembolleri aynen korunmuştur
+
+PASS 9: Gizli/kişisel metadata ve yerel yol hijyeni
+STATUS: PASS
+EXIF sensitive=0; public absolute-local-path=0; raw JPEG teknik EXIF korunuyor
+
+PASS 10: Public paket ve GitHub yerleşim uygunluğu
+STATUS: PASS
+5/5 public asset ZIP CRC PASS; normal Git >100MiB: Chapter3_CohortMaster_GEO10_RAW_PART1.zip, Chapter3_CohortMaster_GEO10_RAW_PART2.zip; bu iki raw parça Release asset olmalı
+
+FINAL_STATUS: PASS

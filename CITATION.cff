@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Bu kodlar kullanılırken ilişkili doktora tezine ve dondurulmuş release/tag ile commit SHA değerine atıf yapılmalıdır."
+title: "Doktora Tezi — Kaynak Kod ve Yeniden Üretilebilirlik Materyalleri"
+type: software
+authors:
+  - family-names: "Adacan"
+    given-names: "Kaan"
+version: "1.0.0"
+abstract: "Kaan Adacan doktora teziyle ilişkili kamuya açık moleküler dinamik yardımcı kodları ile seçilmiş benchmark ve yeniden üretilebilirlik materyallerini içeren kaynak kod deposu."
+repository-code: "https://github.com/KaanAdacan/Doktora_Tezi"

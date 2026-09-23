@@ -1,0 +1,56 @@
+#!/bin/bash
+#SBATCH --job-name=ADK_04_P025_050
+#SBATCH --account=kadacan
+#SBATCH --partition=akya-cuda
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+#SBATCH --gres=gpu:1
+#SBATCH --time=3-00:00:00
+#SBATCH --output=%x_%j.slurm.out
+#SBATCH --error=%x_%j.slurm.err
+
+set -uo pipefail
+cd "$SLURM_SUBMIT_DIR" || exit 10
+mkdir -p "runs/04_PROD_025_050ns"
+
+for f in inputs/ADK_ion.psf inputs/ADK_ion.pdb \
+         inputs/par_water_ions_ale.prm inputs/par_all36_prot.prm inputs/par_all36_cgenff.prm \
+         04_PROD_025_050ns.conf; do
+    [[ -s "$f" ]] || { echo "FATAL: missing input $f" >&2; exit 11; }
+done
+[[ -s "runs/03_PROD_000_025ns/ADK_PROD_000_025ns.coor" ]] || { echo "FATAL: missing prerequisite runs/03_PROD_000_025ns/ADK_PROD_000_025ns.coor" >&2; exit 20; }
+[[ -s "runs/03_PROD_000_025ns/ADK_PROD_000_025ns.vel" ]] || { echo "FATAL: missing prerequisite runs/03_PROD_000_025ns/ADK_PROD_000_025ns.vel" >&2; exit 20; }
+[[ -s "runs/03_PROD_000_025ns/ADK_PROD_000_025ns.xsc" ]] || { echo "FATAL: missing prerequisite runs/03_PROD_000_025ns/ADK_PROD_000_025ns.xsc" >&2; exit 20; }
+
+module purge
+module load apps/namd/3.0.1-multicore-CUDA || exit 12
+
+export OMP_NUM_THREADS=1
+
+echo "DATE_START=$(date -Is)"
+echo "HOST=$(hostname)"
+echo "JOB_ID=$SLURM_JOB_ID"
+echo "JOB_NAME=$SLURM_JOB_NAME"
+echo "PARTITION=$SLURM_JOB_PARTITION"
+echo "CPUS_PER_TASK=$SLURM_CPUS_PER_TASK"
+echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+which namd3 || exit 13
+nvidia-smi -L || exit 14
+
+LOG="runs/04_PROD_025_050ns/namd_${SLURM_JOB_ID}.log"
+CMD=(namd3 +p${SLURM_CPUS_PER_TASK} +setcpuaffinity +devices 0 "04_PROD_025_050ns.conf")
+printf 'COMMAND='; printf '%q ' "${CMD[@]}"; echo
+"${CMD[@]}" > "$LOG" 2>&1
+RET=$?
+
+echo "NAMD_EXIT_CODE=$RET"
+echo "DATE_END=$(date -Is)"
+[[ $RET -eq 0 ]] || exit $RET
+
+for f in "runs/04_PROD_025_050ns/ADK_PROD_025_050ns.coor" "runs/04_PROD_025_050ns/ADK_PROD_025_050ns.vel" "runs/04_PROD_025_050ns/ADK_PROD_025_050ns.xsc"; do
+    [[ -s "$f" ]] || { echo "FATAL: expected final state missing: $f" >&2; exit 90; }
+done
+
+echo "FINAL_STATE_OK=YES"
+exit 0
