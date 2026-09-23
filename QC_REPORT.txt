@@ -4,7 +4,10 @@ DEPO: KaanAdacan/Doktora_Tezi
 PUBLIC REPOSITORY SCOPE — 23.09.2026
 
 BÖLÜM 2
-Temel NAMD MAPK/ADK kodları dahil; ayrıntılı etkileşim analizi onay sonrası.
+Final canonical matched-10ps MAPK/ADK analiz zinciri, Stage 00 QC dahil olmak üzere senkronizedir.
+Stage 03/04 RMSD, RMSF, Rg ve PCA çekirdek kodları Source v2 ile byte-identical olarak doğrulanmıştır.
+MAPK NAMD .conf dosyaları doğrulanmış MAPK_NVT_NPT_GPU kaynak paketiyle eşitlenmiştir.
 
 BÖLÜM 3
-Kaynak kod yayın öncesi kapalı; benchmark/validation materyalleri public release kapsamında tutulmaktadır.
+Kaynak kod yayın öncesi kapalıdır; benchmark/validation materyalleri public release kapsamında tutulmaktadır.
+Doğrulanmış daha yeni bir Chapter 3 kaynak kod paketi olmadığı için çekirdek araç kodunda değişiklik yapılmamıştır.
