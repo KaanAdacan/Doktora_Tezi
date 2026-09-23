@@ -1,0 +1,4 @@
+reference_id	title	authors	journal	year	doi	pmid	verified_status	used_for
+NAMD2020	Scalable molecular dynamics on CPU and GPU architectures with NAMD	Phillips JC et al.	J Chem Phys	2020	10.1063/5.0014475	32752662	VERIFIED	NAMD engine and state-file provenance
+VMD1996	VMD: visual molecular dynamics	Humphrey W; Dalke A; Schulten K	J Mol Graph	1996	10.1016/0263-7855(96)00018-5	8744570	VERIFIED	Structural representation and independent inspection
+MDANALYSIS2011	MDAnalysis: a toolkit for the analysis of molecular dynamics simulations	Michaud-Agrawal N et al.	J Comput Chem	2011	10.1002/jcc.21787	21500218	VERIFIED	Trajectory/topology analysis framework used in subsequent stage
