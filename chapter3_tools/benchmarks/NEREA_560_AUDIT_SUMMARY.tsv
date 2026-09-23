@@ -1,0 +1,12 @@
+field	value	note
+Canonical_raw_images	560	Source collection size
+Unique_raw_basenames	543	
+NEREA_result_rows	463	Current Results table
+Unique_NEREA_image_names	463	
+Unique_basenames_missing_entirely	80	No NEREA Results row
+Source_files_represented_by_missing_basenames	80	
+Duplicate_basenames_in_source	17	
+Source_files_involved_in_duplicate_basenames	34	Cannot be uniquely distinguished from basename-only output
+Source_level_unambiguous_results	446	463 rows minus 17 ambiguous basename-level rows
+Files_requiring_clean_rerun	114	80 missing + all 34 duplicate-basename source files
+Interpretation	Current NEREA Results table is not a complete source-level 560-image table	Rerun required for clean final source-level comparison
