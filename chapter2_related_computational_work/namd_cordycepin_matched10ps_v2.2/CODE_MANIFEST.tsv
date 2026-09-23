@@ -1,0 +1,17 @@
+path	role
+01_STATE_DISCOVERY/code/state_discovery.py	Resolve exact T1=0 ns, T2=50 ns, T3=100 ns NAMD boundary states
+01_STATE_DISCOVERY/verification/verify_state_discovery.py	Known-answer verification for exact-state discovery
+02_TOPOLOGY_LIGAND_SNAPSHOTS/code/topology_ligand_snapshots.py	Topology lineage, atom-order audit and exact snapshot generation
+02_TOPOLOGY_LIGAND_SNAPSHOTS/verification/verify_stage02.py	Known-answer verification for topology/snapshot stage
+02A_TOPOLOGY_MODE_AUDIT/code/topology_mode_audit.py	Verify receptor-only/apo topology mode
+02A_TOPOLOGY_MODE_AUDIT/verification/verify_stage02a.py	Known-answer verification for apo topology audit
+03_APO_PROTEIN_METRICS_MATCHED10PS/code/apo_protein_metrics_matched10ps.py	Production-only matched-10ps RMSD/backbone RMSD/RMSF/Rg analysis
+03_APO_PROTEIN_METRICS_MATCHED10PS/code/sampling_policy.py	MAPK stride1 / ADK stride5 deterministic 10-ps sampling policy
+03_APO_PROTEIN_METRICS_MATCHED10PS/verification/verify_matched10ps.py	Known-answer verification of matched 10-ps policy
+04_PCA_CLUSTERING_MATCHED10PS/code/pca_clustering_matched10ps.py	Exact PCA, cluster-quality diagnostics, RMSIP
+04_PCA_CLUSTERING_MATCHED10PS/code/sampling_policy.py	Matched 10-ps sampling policy for PCA/clustering
+05_THESIS_FIGURES_MATCHED10PS/code/build_thesis_figures_matched10ps.py	600-dpi thesis/manuscript MD/PCA figure generation
+05_THESIS_FIGURES_MATCHED10PS/code/generate_updated_text.py	Generate updated method/results/discussion from real matched outputs
+ENVIRONMENT/SETUP_MDANALYSIS_ENV.sh	Frozen analysis environment setup
+START_MATCHED10PS_FROM_DOWNLOADS.sh	End-to-end matched 10-ps analysis launcher
+METHODS_RESULTS_DISCUSSION_UPDATE_TR.md	Method/reporting lock for matched 10-ps analysis
