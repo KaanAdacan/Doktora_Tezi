@@ -1,0 +1,16 @@
+metric	Cyx-KA_Vesseller	AngioTool	NEREA	interpretation
+Canonical_source_images	560	560	560	Same large heterogeneous CAM source collection
+Technical_result_rows	560	560	463	Technical completion is not equivalent to valid vascular segmentation
+Source_level_unambiguous_results	560	560	446	NEREA ambiguity reflects basename collisions
+Missing_source_files	0	0	80	
+Source_files_with_ambiguous_identity	0	0	34	NEREA: 17 shared basenames represent 34 distinct source files
+Files_requiring_clean_rerun_for_table_completeness	0	0	114	NEREA: 80 missing + 34 ambiguous source files
+Vesseller_QC_PASS	423	NA	NA	75.54% of 560
+Vesseller_QC_REVIEW_total	137	NA	NA	24.46% of 560; REVIEW is not analysis failure
+Vesseller_REVIEW_broad_dark_shadow_or_uncertain_embryo	84	NA	NA	15.00% of 560
+Vesseller_REVIEW_global_darkness_failsafe	39	NA	NA	6.96% of 560
+Vesseller_REVIEW_low_ROI_retention	7	NA	NA	1.25% of 560
+Vesseller_REVIEW_high_embryo_exclusion_plus_low_ROI	5	NA	NA	0.89% of 560
+Vesseller_REVIEW_high_embryo_exclusion_alone	2	NA	NA	0.36% of 560
+Vesseller_capillary_rescue_active	431	NA	NA	76.96% of 560; usage frequency, not proof of accuracy gain
+Locked_operational_status	560/560 complete + explicit QC	QC-run/FAIL	Incomplete/ambiguous source-level table	Three tools show different operational outcomes
