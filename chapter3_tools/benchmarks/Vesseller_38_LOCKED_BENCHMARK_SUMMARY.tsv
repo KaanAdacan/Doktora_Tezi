@@ -1,0 +1,24 @@
+metric	value	n	definition_or_boundary
+Images_presented	38	38	Independent locked hold-out benchmark
+Successful_analyses	38	38	Rejected input=0; analysis failure=0
+QC_PASS	9	38	Automatic QC PASS
+QC_REVIEW_total	29	38	REVIEW is not analysis failure
+REVIEW_embryo_filter_global_dark_failsafe	18	38	QC reason
+REVIEW_broad_dark_region_retained_shadow_or_uncertain_embryo	10	38	QC reason
+REVIEW_high_embryo_exclusion_fraction	1	38	QC reason
+Dice_mean	0.7628384416756165	38	Pixel-level comparison restricted to frozen Analysis ROI
+Dice_SD	0.04339327737189134	38	
+Dice_mean_95CI_low	0.7485754263241636	38	
+Dice_mean_95CI_high	0.7771014570270695	38	
+IoU_mean	0.6184847433602559	38	Pixel-level comparison restricted to frozen Analysis ROI
+IoU_SD	0.055135319886108036	38	
+IoU_mean_95CI_low	0.6003622146744594	38	
+IoU_mean_95CI_high	0.6366072720460525	38	
+Precision_mean	0.7867909899928197	38	
+Recall_Sensitivity_mean	0.7533546182695418	38	
+Specificity_mean	0.9630753827635982	38	
+Absolute_Area_Error_Pct_mean	15.783090270945758	38	
+Software_version	1.1.3.2	38	Frozen benchmark software version
+Run_ID	e8ab515afe7745f79c56f9480c597bf1	38	Frozen benchmark run identifier
+Source_core_SHA256	375de9f22691833e16a7edd705821e6fffc344fe6ac67730badabfe898a43d56	38	Scientific core identity
+Results_CSV_SHA256	1dfd79cde29556d971c37c1137ea34578f421c65cdf70d9d50e9692583a1bf8e	38	Quantitative result-table identity
