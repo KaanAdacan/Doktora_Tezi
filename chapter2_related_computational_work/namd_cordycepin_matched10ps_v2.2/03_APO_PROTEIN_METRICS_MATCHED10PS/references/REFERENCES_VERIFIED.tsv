@@ -1,0 +1,4 @@
+reference_id	title	authors	journal	year	doi	pmid	verified_status	used_for
+MDANALYSIS2011	MDAnalysis: a toolkit for the analysis of molecular dynamics simulations	Michaud-Agrawal N; Denning EJ; Woolf TB; Beckstein O	J Comput Chem	2011	10.1002/jcc.21787	21500218	VERIFIED	Trajectory parsing and structural analysis
+CPPTRAJ2013	PTRAJ and CPPTRAJ: Software for Processing and Analysis of Molecular Dynamics Trajectory Data	Roe DR; Cheatham TE 3rd	J Chem Theory Comput	2013	10.1021/ct400341p	26583988	VERIFIED	RMS fitting and radius-of-gyration analysis precedent
+HUNENBERGER1995	Fluctuation and cross-correlation analysis of protein motions observed in nanosecond molecular dynamics simulations	Hünenberger PH; Mark AE; van Gunsteren WF	J Mol Biol	1995	10.1006/jmbi.1995.0514	7563068	VERIFIED	Atomic fluctuation analysis
