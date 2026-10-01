@@ -1,0 +1,4 @@
+source_archive	size_bytes	sha256	status
+38benchmark_angiotool(1).zip	1357780	c04dd3a17e27941bdad608a983d15d5e92cead26effd108f1389ff1968785134	38 result JPG + locked XLSX present; public table sanitized
+38benchmark_NEREA(2).zip	4172	46392035020a576266cf1ff71c756cf5878f5868d6add524ec43b608750fba85	23 directories; 0 payload files; N/A
+01_ORIGINAL_HOLDOUT2(1).zip	2502531	e86a365d7f1af5aff958f80d458e7d888e3951fdc81e695050dc1ef3699da2c7	38 original images; duplicate of source images already represented in Vesseller public benchmark asset
