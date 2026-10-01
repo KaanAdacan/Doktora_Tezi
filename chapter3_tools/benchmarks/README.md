@@ -9,7 +9,7 @@ Bu dizin, Cyx-KA CohortMaster ve Cyx-KA Vesseller için doktora tezi kapsamında
 - Doğrulama özeti: `CohortMaster_VALIDATION_SUMMARY.tsv`.
 
 ## CAM — 38 görüntülük locked benchmark
-Bu public CAM benchmarkı 38 görüntülük bağımsız locked hold-out setini kapsar.
+Bu public CAM accuracy benchmarkı 38 görüntülük bağımsız locked hold-out setini kapsar.
 
 ### Cyx-KA Vesseller
 - 38 özgün hold-out CAM görüntüsü ve 38 frozen reference mask.
@@ -34,8 +34,18 @@ Bu public CAM benchmarkı 38 görüntülük bağımsız locked hold-out setini k
 ### Source provenance
 Kullanıcı tarafından sağlanan 38-image comparator arşivlerinin byte-level SHA-256 kayıtları `COMPARATOR_38_SOURCE_ARCHIVE_SHA256.tsv` içinde tutulur. 38 original hold-out görüntüsü Vesseller public benchmark assetinde zaten bulunduğundan ayrı bir ikinci public kopya oluşturulmaz.
 
+## CAM — 560 görüntülük operasyonel benchmark
+560 görüntülük geniş CAM koleksiyonu accuracy benchmarkından ayrı olarak operasyonel tamamlama, kaynak-çıktı izlenebilirliği ve QC görünürlüğü açısından değerlendirilmiştir.
+
+- Üç araçlı operasyonel özet: `CAM_560_OPERATIONAL_BENCHMARK_SUMMARY.tsv`.
+- Cyx-KA Vesseller: 560/560 sonuç; QC PASS=423, QC REVIEW=137.
+- AngioTool: 560/560 teknik sonuç satırı üretti, ancak locked run vasküler segmentasyon QC'sini karşılamadı; özet `AngioTool_LOCKED_RUN_QC.tsv` içindedir.
+- NEREA: 463 sonuç satırı oluştu; 80 kaynak dosya eksik, 34 kaynak dosyada basename kimliği belirsiz ve temiz source-level finalizasyon için 114 dosyanın yeniden çalıştırılması gerekmektedir. Audit özeti `NEREA_560_AUDIT_SUMMARY.tsv` içindedir.
+- Bu nedenle 560-image koleksiyon için üç araç arasında tamamlanmış comparison-eligible bir benchmark oluşmamıştır. Comparatorlarda geçerli reference-mask karşılaştırması bulunmadığında accuracy değerleri yapay olarak 0 verilmez; `N/A` olarak tutulur.
+- 560 ham görüntü koleksiyonu public release asseti olarak paylaşılmamaktadır. Public depo, bu operasyonel çalışmanın yalnızca doğrulanmış özet/audit kayıtlarını taşır.
+
 ## Public release ve bütünlük
 `chapter3-benchmarks-v1.0.0` release'i Vesseller frozen benchmark materyalini ve CohortMaster doğrulama varlıklarını taşır. Büyük GEO raw arşivleri `PUBLIC_RELEASE_ASSET_MANIFEST.tsv` içindeki SHA-256 değerleriyle GitHub Release asset olarak saklanır.
 
 ## Tez / Supplement kullanımı
-Tezin EK/Tekrarlanabilirlik bölümünde immutable commit bağlantısı, Chapter 3 release bağlantısı ve ilgili SHA-256 kayıtları birlikte verilmelidir. Bu depo yalnız benchmark/doğrulama kanıtını public tutar; araştırma yazılımlarının kaynak kodları tez eklerinde ayrıca sunulmuştur.
+Tezin EK/Tekrarlanabilirlik bölümünde immutable commit bağlantısı, Chapter 3 release bağlantısı ve ilgili SHA-256 kayıtları birlikte verilmelidir. Bu depo benchmark/doğrulama kanıtını public tutar; araştırma yazılımlarının kaynak kodları tez eklerinde ayrıca sunulmuştur.
