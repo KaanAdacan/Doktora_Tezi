@@ -1,0 +1,19 @@
+parameter	value
+Low Threshold	15
+High Threshold	255
+Vessel Thickness	12
+Small Particles	0.0
+Fill Holes	0.0
+Max Hole Level	1.5
+Min Boxness	0.09375
+Min Area Length Ratio	16.0
+Skeletonizer	Thorough
+Max Skeleton Steps	25
+Scaling Factor	1.0
+Transformed Colors	No
+Hue Transform Weight	1.0
+Brightness Weight	1.0
+Target Color	#ff0000
+Off Color	#ff9900
+Saturation Factor	1.0
+Brightness Graph	(0,0), (100,100)
