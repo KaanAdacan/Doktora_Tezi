@@ -9,7 +9,7 @@ Bu dizin, Cyx-KA CohortMaster ve Cyx-KA Vesseller için doktora tezi kapsamında
 - Doğrulama özeti: `CohortMaster_VALIDATION_SUMMARY.tsv`.
 
 ## CAM — 38 görüntülük locked benchmark
-Bu public CAM benchmarkı yalnız 38 görüntülük bağımsız locked hold-out setini kapsar. 560 görüntülük operasyonel çalışma bu public benchmark paketinin parçası değildir.
+Bu public CAM benchmarkı 38 görüntülük bağımsız locked hold-out setini kapsar.
 
 ### Cyx-KA Vesseller
 - 38 özgün hold-out CAM görüntüsü ve 38 frozen reference mask.
