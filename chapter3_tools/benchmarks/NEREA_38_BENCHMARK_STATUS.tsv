@@ -1,0 +1,7 @@
+field	value	note
+Benchmark_images	38	Same locked hold-out source set
+Archive_directory_entries	23	Directory structure present
+Archive_payload_files	0	No CSV/XLSX/result-image payloads in supplied archive
+Usable_quantitative_output	No	No comparison-eligible NEREA output available
+Accuracy_metrics	N/A	Not converted to artificial zero values
+Source_archive_SHA256	46392035020a576266cf1ff71c756cf5878f5868d6add524ec43b608750fba85	38benchmark_NEREA(2).zip
