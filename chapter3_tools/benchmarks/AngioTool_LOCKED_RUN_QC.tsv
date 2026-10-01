@@ -1,0 +1,24 @@
+field	value	note
+Locked_source_file	angioanaliz.xlsx	Authoritative locked comparator result table
+Technical_result_rows	560	560/560 technical table completion
+Distinct_image_identifiers	560	No missing or duplicate result rows
+Missing_result_rows	0	
+Duplicate_result_rows	0	
+Locked_run_status	QC-run/FAIL	Technical completion did not meet vascular QC acceptance
+Paired_visual_QC_images	24	Matched visual QC pairs
+Paired_visual_QC_finding	over-segmentation	Systematic over-segmentation observed
+TIF_skeleton_QC_total	75	Inspected TIF outputs
+TIF_zero_red_skeleton_inner_region	69	69/75
+TIF_zero_red_skeleton_inner_region_pct	92.0	69/75
+Vessel_thickness_px	12	Locked run parameter
+Low_threshold	15	Locked run parameter
+High_threshold	255	Locked run parameter
+Skeletonizer	Thorough (Lee94)	Locked run parameter
+Max_skeleton_steps	25	Locked run parameter
+Min_boxness_pct	9.375	Locked run parameter
+Min_length_area_ratio	1:16	Locked run parameter
+Transform_colors	Off	Locked run parameter
+Color_mode	Grayscale	Locked run parameter
+Lacunarity	On	Locked run parameter
+Thickness	On	Locked run parameter
+Interpretation	560/560 technical completion is not valid vascular segmentation	Do not convert QC-run/FAIL into an artificial Dice=0 score
